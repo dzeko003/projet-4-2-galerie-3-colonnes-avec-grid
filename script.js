@@ -1,7 +1,7 @@
 const PHOTOS = [
   {
     id: 1,
-    src: "https://picsum.photos/seed/congo-fleuve/1000/1000",
+    src: "https://img.rezdy.com/PRODUCT_IMAGE/13699/161c670659c54d67b73cb368c4775d3e28.jpg",
     title: "Le fleuve Congo au crépuscule",
     desc: "Vue sur le fleuve depuis le Djoué, lumière du soir.",
     category: "paysages",
@@ -9,77 +9,77 @@ const PHOTOS = [
   },
   {
     id: 2,
-    src: "https://picsum.photos/seed/congo-marche/700/700",
-    title: "Marché de Poto-Poto",
-    desc: "Étals colorés et effervescence du matin.",
+    src: "https://www.tribune-eco.cg/wp-content/uploads/2026/06/OS.png",
+    title: "salon osiane 2026",
+    desc: "salon de l'innovation et de technologie",
     category: "evenements",
   },
   {
     id: 3,
-    src: "https://picsum.photos/seed/congo-basilique/700/700",
+    src: "https://lacongolaise242.org/wp-content/uploads/2023/04/ST-ANNE2.jpg",
     title: "Basilique Sainte-Anne",
     desc: "Toiture verte emblématique, style Art déco.",
     category: "architecture",
   },
   {
     id: 4,
-    src: "https://picsum.photos/seed/congo-rapides/700/700",
-    title: "Rapides de Kintambo",
-    desc: "Les eaux vives à la sortie du Pool Malebo.",
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/0a/fd/91/20190116-072701-largejpg.jpg?w=900&h=500&s=1",
+    title: "Pont du Djoué",
+    desc: "Le pont tire son nom de l'entreprise Ottino à laquelle la société des Batignolles avait confié la réalisation de nombreux ouvrages d'art de la ligne du Chemin de fer Congo Océan. ",
     category: "paysages",
   },
   {
     id: 5,
-    src: "https://picsum.photos/seed/congo-avenue/700/700",
-    title: "Avenue de l'Indépendance",
-    desc: "Artère centrale au coucher du soleil.",
+    src: "https://s.rfi.fr/media/display/dd5982f8-0d95-11ea-8244-005056a98db9/w:1024/p:16x9/brazzaville_0.jpg",
+    title: "Pont du 15 Août 1960",
+    desc: "La République du Congo (Brazzaville) accède à l'indépendance vis-à-vis de la France",
     category: "architecture",
   },
   {
     id: 6,
-    src: "https://picsum.photos/seed/congo-festival/700/700",
-    title: "Festival panafricain",
+    src: "https://fespam.cg/wp-content/uploads/2024/10/Slider_acueil_4-768x513.jpeg",
+    title: "Festival panafricain de la musique",
     desc: "Danseurs et percussions en plein centre-ville.",
     category: "evenements",
   },
   {
     id: 7,
-    src: "https://picsum.photos/seed/congo-foret/700/700",
+    src: "https://infocongo.org/wp-content/uploads/2016/09/marine-2.jpg",
     title: "Forêt de la Bouenza",
     desc: "Canopée dense à quelques heures de la capitale.",
     category: "paysages",
   },
   {
     id: 8,
-    src: "https://picsum.photos/seed/congo-gare/700/700",
+    src: "https://photos.smugmug.com/Around-the-World/Africa/201910-Congo-Brazzaville/i-SgNjgQL/0/LrGqwZFdtwmQZxdjhgf7V2cMfB628dbj3L27SqrQ6/L/043_Brazzaville.%20Place%20de%20la%20Libert%C3%A9.%20La%20Gare-L.jpg",
     title: "Gare de Brazzaville",
     desc: "Architecture coloniale restaurée, façade ocre.",
     category: "architecture",
   },
   {
     id: 9,
-    src: "https://picsum.photos/seed/congo-musique/700/700",
+    src: "https://www.journaldebrazza.com/wp-content/uploads/2025/07/fespam2025.jpg",
     title: "Fête de la musique",
     desc: "Scène improvisée, foule du quartier de Bacongo.",
     category: "evenements",
   },
   {
     id: 10,
-    src: "https://picsum.photos/seed/congo-plateau/700/700",
-    title: "Plateau des Cataractes",
-    desc: "Panorama sur les gorges en fin de journée.",
+    src: "https://my-make-bucket.s3.eu-north-1.amazonaws.com/Photos/ncaaez1b8chsm1bnnp8v.webp",
+    title: "Chute d'eau",
+    desc: "Visiter les chutes de la Loufoulakari , paysage magnifique",
     category: "paysages",
   },
   {
     id: 11,
-    src: "https://picsum.photos/seed/congo-cathedrale/700/700",
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/fa/a5/70/the-main-facade.jpg?w=900&h=500&s=1",
     title: "Cathédrale Sacré-Cœur",
     desc: "Vitraux et charpente métallique d'époque.",
     category: "architecture",
   },
   {
     id: 12,
-    src: "https://picsum.photos/seed/congo-foire/700/700",
+    src: "https://pouvoirsafrique.com/pouvoirsafrique/uploads/images/2024/07/24/10862.png",
     title: "Foire artisanale de Bacongo",
     desc: "Vanneries et tissus wax exposés au grand jour.",
     category: "evenements",
@@ -156,7 +156,7 @@ function renderPagination(totalPages) {
 
   const prevBtn = document.createElement("button");
   prevBtn.className = "page-btn";
-  prevBtn.textContent = "‹";
+  prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
   prevBtn.disabled = currentPage === 1;
   prevBtn.addEventListener("click", () => {
     currentPage--;
@@ -170,7 +170,7 @@ function renderPagination(totalPages) {
 
   const nextBtn = document.createElement("button");
   nextBtn.className = "page-btn";
-  nextBtn.textContent = "›";
+  nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
   nextBtn.disabled = currentPage === totalPages;
   nextBtn.addEventListener("click", () => {
     currentPage++;
