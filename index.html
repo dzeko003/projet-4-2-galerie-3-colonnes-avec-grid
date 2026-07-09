@@ -4,6 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROJET 4.2: Galerie 3 colonnes avec Grid</title>
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Geist+Pixel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="section-title">
+      <header>
+        <span class="tagTitre">Galerie Photo de la capitale Congolaise</span>
+        <h1>Brazzaville en <span class="tagName">images</span></h1>
+        <p>
+          Une sélection de paysages, d'architecture et d'événements qui
+          racontent la ville clique sur une photo pour l'agrandir.
+        </p>
+      </header>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="paysages">Paysages</button>
+        <button class="filter-btn" data-filter="architecture">
+          Architecture
+        </button>
+        <button class="filter-btn" data-filter="evenements">Événements</button>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <div class="box" id="box">
+      <button class="btn-close" id="btnClose" aria-label="Fermer">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <button class="btn-prev" id="btnPrev" aria-label="Image précedent">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="box-content">
+        <img src="" alt="" id="boxImage" />
+        <div class="box-details">
+          <h3 id="boxTilte"></h3>
+          <p id="boxDesc"></p>
+        </div>
+      </div>
+
+      <button class="btn-next" id="btnNext" aria-label="Image suivante">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
